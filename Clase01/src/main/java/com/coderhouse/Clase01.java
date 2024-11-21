@@ -71,13 +71,6 @@ public class Clase01 {
 		
 		//
 
-		
-		
-		
-		
-		
-		
-
 
 	}
 
