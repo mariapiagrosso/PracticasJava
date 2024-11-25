@@ -13,6 +13,8 @@ public class Clase02 {
 		} 
 			
 		System.out.println("Si llegamos hasta aca es porque se ejecuto el if ");
+		
+		
 	}
 
 }
