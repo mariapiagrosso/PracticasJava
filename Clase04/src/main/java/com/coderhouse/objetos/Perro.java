@@ -1,6 +1,11 @@
 package com.coderhouse.objetos;
 
 public class Perro {
+	
+	//Variable de clase
+	private static final int EDAD_MAXIMA = 15;
+	
+	String mensajeDeError = "El Perro no vive mas de " + EDAD_MAXIMA + "años de edad.";
 
 	// Variables de instancia o Atributos del Objeto
 	private String nombre;
@@ -12,15 +17,16 @@ public class Perro {
 	
 	//Metodos 
 	public void ladrar(){
-		System.out.println("El perro esta ladrando.!");
+		String nombreDelPerro = getNombre(); //Variable Local
+		System.out.println("El perro " + nombreDelPerro + " esta ladrando.!");
 	}
 	
 	public void caminar(){
-		System.out.println("El perro esta caminando.!");
+		System.out.println("El perro " + getNombre() + " esta caminando.!");
 	}
 	
 	public void comer(){
-		System.out.println("El perro esta comiendo.!");
+		System.out.println("El perro " + getNombre() + "  esta comiendo.!");
 	}
 	
  	//Getters y Setters
@@ -61,8 +67,13 @@ public class Perro {
 		return this.edad;
 	}
 
-	public void setEdad(int edad) {
-		this.edad = edad;
+	public void setEdad(int edad) throws Exception  {
+		if (edad > EDAD_MAXIMA) {
+			throw new Exception (mensajeDeError);
+		} else {
+			this.edad = edad;
+		}
+		
 	}
 
 	@Override
