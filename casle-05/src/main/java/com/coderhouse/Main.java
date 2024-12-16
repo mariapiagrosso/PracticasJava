@@ -17,7 +17,10 @@ public class Main {
 		unPerro.caminar();
 		unPerro.ladrar();
 
-		System.out.println(unPerro);
+		//System.out.println(unPerro);
+		
+
+
 		
 		
 				
