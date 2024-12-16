@@ -1,5 +1,6 @@
 package com.coderhouse.mascotas;
 
+import com.coderhouse.PerroException;
 
 public class Macota {
 
@@ -10,10 +11,31 @@ public class Macota {
 	private String color;
 	private String tamanio;
 	private int edad;
+	
+	//Constructor
+	
+	public Macota() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	//Sobrecarga de constructores
+	public Macota(String nombre, String color, String tamanio, int edad) {
+		super();
+		this.nombre = nombre;
+		this.color = color;
+		this.tamanio = tamanio;
+		this.edad = edad;
+	}
+
+
 
 	public void caminar() {
 		System.out.println("La mascota  " + getNombre() + " esta caminando.!");
 	}
+
+
 
 	public void comer() {
 		System.out.println("La mascota " + getNombre() + "  esta comiendo.!");
@@ -47,9 +69,9 @@ public class Macota {
 		return this.edad;
 	}
 
-	public void setEdad(int edad) throws Exception  {
+	public void setEdad(int edad) throws PerroException  {
 		if (edad > EDAD_MAXIMA) {
-			throw new Exception (mensajeDeError);
+			throw new PerroException (mensajeDeError);
 		} else {
 			this.edad = edad;}
 		}

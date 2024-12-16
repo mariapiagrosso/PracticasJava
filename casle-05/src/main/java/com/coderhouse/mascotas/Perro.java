@@ -7,6 +7,11 @@ public class Perro extends Macota {
 	public void ladrar(){
 		System.out.println("El perro  " + getNombre() + " esta ladrando.!");
 	}
+	
+	@Override // Sobrescritura de metodo
+	public void caminar() {
+		System.out.println("El Perro " + getNombre() + " esta Caminando en el Parque.!");
+	}
 
 	public String getRaza() {
 		return this.raza;
@@ -16,9 +21,9 @@ public class Perro extends Macota {
 		this.raza = raza;
 	}
 
-	@Override
-	public String toString() {
-		return "Perro [raza=" + raza + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Hola Gente como va?";
+//	}
 
 }
