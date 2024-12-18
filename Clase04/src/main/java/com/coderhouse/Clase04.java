@@ -32,7 +32,7 @@ public class Clase04 {
 			"Sara",
 			"Matias",
 			"Marcelo",
-			"Alejandrro"
+			"Alejandro"
 		};
 				
 		imprimirListaDeNombres(nombres);
