@@ -1,0 +1,49 @@
+CREATE DATABASE 
+IF NOT EXISTS coderhouse; -- Creacion de la Base de datos coderhouse
+
+USE coderhouse;
+
+SELECT * FROM coderhouse.categorias;
+SELECT * FROM coderhouse.clientes;
+SELECT * FROM coderhouse.productos;
+
+
+INSERT INTO categorias (Nombre)
+VALUES 
+('Consolas'),
+('Celulares'),
+('Accesorios');
+
+
+INSERT INTO clientes (Nombre, codcli, dni) 
+VALUES 
+('Fravega', 'E32855827', 32855827),
+('Play For Fun', 'E25878987', 25878987),
+('Eduardo Madero SA', 'E36897544', 36897544),
+('Next Level', 'E32855829', 32855829);
+
+
+INSERT INTO clientes (Nombre, categoria_id)
+VALUES 
+    ('PS4 PRO', 1),
+    ('PS4 Fat', 1),
+    ('PS4 Slim', 1),
+    ('PS5 Standard Edition', 1),
+    ('PS5 Digital Edition', 1),
+    ('Xbox X', 1),
+    ('Xbox S', 1),
+    ('Nintendo Switch Original', 1),
+    ('Nintendo Switch Mejorada', 1),
+    ('Nintendo Switch OLED', 1),
+    ('Nintendo Switch Lite', 1),
+    ('Auriculares JBL Tune 510BT Negro', 2),
+    ('Auriculares JBL Tune 510BT Azul', 2),
+    ('Joystick Inalambrico Xbox S/X', 2),
+    ('Joystick PS5', 2),
+    ('Samsung Galaxy A15', 3),
+    ('Samsung Galaxy A25', 3),
+    ('Xiaomi Redmi 13C', 3);
+
+
+
+
