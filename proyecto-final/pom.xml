@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.coderhouse</groupId>
-	<artifactId>primer-entrega</artifactId>
+	<artifactId>proyecto-final</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>primer-entrega</name>
-	<description>1er app en Spring Boot</description>
+	<name>proyecto-final</name>
+	<description>Proyecto Final Java</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -38,6 +38,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -48,11 +52,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>6.4.4.Final</version>
 		</dependency>
 	</dependencies>
 

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.coderhouse</groupId>
-	<artifactId>primer-entrega</artifactId>
+	<artifactId>segunda-entrega</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>primer-entrega</name>
-	<description>1er app en Spring Boot</description>
+	<name>segunda-entrega</name>
+	<description>2er app en Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -53,6 +53,14 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>6.4.4.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	</dependencies>
 
