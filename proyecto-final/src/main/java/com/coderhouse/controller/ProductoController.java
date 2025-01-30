@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.coderhouse.dto.AsignacionCategoriaProductoDTO;
 import com.coderhouse.models.Producto;
 import com.coderhouse.services.ProductoService;
 
@@ -79,4 +80,21 @@ public class ProductoController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	}
+	
+	@PostMapping("/asignar-categoria")
+	public ResponseEntity<Producto> asignarCategoriaAProducto(@RequestBody AsignacionCategoriaProductoDTO dto){
+		try {
+			
+			Producto productoActualizado = productoService.asignarCategoriaAProducto(
+					dto.getProductoId(), 
+					dto.getCategoriaId()
+					);
+			return ResponseEntity.ok(productoActualizado);
+		} catch (IllegalArgumentException e) {
+			return ResponseEntity.notFound().build();
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();		
+		}
+	}
+	
 }

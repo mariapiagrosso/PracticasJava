@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.coderhouse.models.Categoria;
 import com.coderhouse.models.Producto;
+import com.coderhouse.repositories.CategoriaRepository;
 import com.coderhouse.repositories.ProductoRepository;
 
 import jakarta.transaction.Transactional;
@@ -15,6 +17,9 @@ public class ProductoService {
 
 	@Autowired
 	private ProductoRepository productoRepository;
+	
+	@Autowired
+	private CategoriaRepository categoriaRepository;
 
 	public List<Producto> getAllProductos() {
 		return productoRepository.findAll();
@@ -46,5 +51,21 @@ public class ProductoService {
 			throw new IllegalArgumentException("Producto no encontrado");
 		}
 	}
+	
+	@Transactional
+	public Producto asignarCategoriaAProducto(Long productoId, Long categoriaId) {
+		Categoria categoria = categoriaRepository.findById(categoriaId)
+				.orElseThrow(() -> new IllegalArgumentException("Categoria no encontrado"));
+		Producto producto = productoRepository.findById(productoId)
+				.orElseThrow(() -> new IllegalArgumentException("Producto no encontrado"));
+
+		producto.setCategoria(categoria);
+
+		return productoRepository.save(producto);
+	}
+	
+	
+	
+
 	
 }
