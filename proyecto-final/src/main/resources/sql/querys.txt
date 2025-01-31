@@ -15,12 +15,12 @@ VALUES
 ('Accesorios');
 
 
-INSERT INTO clientes (Nombre, codcli, dni) 
+INSERT INTO clientes (Nombre, apellido, codcli, dni, email) 
 VALUES 
-('Fravega', 'E32855827', 32855827),
-('Play For Fun', 'E25878987', 25878987),
-('Eduardo Madero SA', 'E36897544', 36897544),
-('Next Level', 'E32855829', 32855829);
+('Juan','Perex', 'E32855827', 32855827,'juan@gmail.com'),
+('Maria','Gomez', 'E25878987', 25878987,'maria.g@gmail.com'),
+('Juan','Madero', 'E36897544', 36897544,'emadero@nada.com'),
+
 
 
 INSERT INTO clientes (Nombre, categoria_id)

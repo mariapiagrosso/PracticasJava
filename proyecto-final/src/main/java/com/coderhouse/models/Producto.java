@@ -1,10 +1,13 @@
 package com.coderhouse.models;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -26,15 +29,23 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Schema(description = "Modelo de Producto", title = "Modelo de Producto")
 @Entity
 @Table(name = "Productos")
 public class Producto {
 
+	@Schema(description = "ID del Producto", requiredMode = Schema.RequiredMode.REQUIRED, example = "1")
 	@Id // PK
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrement
-
 	private Long id;
+	
+	 @Schema(description = "Nombre del producto", example = "PS4 PRO", requiredMode = Schema.RequiredMode.REQUIRED)
+	 @Column(nullable = false)
 	private String nombre;
+	 
+	 @Schema(description = "Precio del producto", example = "5875.29", requiredMode = Schema.RequiredMode.REQUIRED)
+	 @Column(nullable = false)
+	 private BigDecimal precioVentaProducto;
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
@@ -50,52 +61,5 @@ public class Producto {
 	
 	
 
-//	public Producto() {
-//		super();
-//
-//	}
-//
-//	public Producto(String nombre) {
-//		super();
-//		this.nombre = nombre;
-//	}
-//
-//	public Long getId() {
-//		return this.id;
-//	}
-//
-//	public void setId(Long id) {
-//		this.id = id;
-//	}
-//
-//	public String getNombre() {
-//		return this.nombre;
-//	}
-//
-//	public void setNombre(String nombre) {
-//		this.nombre = nombre;
-//	}
-//
-//	public List<Cliente> getClientes() {
-//		return Clientes;
-//	}
-//
-//	public void setClientes(List<Cliente> clientes) {
-//		Clientes = clientes;
-//	}
-//
-//
-//	public Categoria getCategoria() {
-//		return categoria;
-//	}
-//
-//	public void setCategoria(Categoria categoria) {
-//		this.categoria = categoria;
-//	}
-//
-//	@Override
-//	public String toString() {
-//		return "Producto [id=" + id + ", nombre=" + nombre + "]";
-//	}
 	
 }

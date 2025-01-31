@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -25,14 +26,17 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Schema(description = "Modelo de Categoria", title = "Modelo de Categoria")
 @Entity
 @Table(name = "Categorias")
 public class Categoria {
 
+	@Schema(description = "ID de la Categoria", requiredMode = Schema.RequiredMode.REQUIRED, example = "1")
 	@Id // PK
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrement
 	private Long id;
 
+	@Schema(description = "Nombre de la Categoria", requiredMode = Schema.RequiredMode.REQUIRED, example = "Consolas")
 	@Column(unique = true, nullable = true)
 	private String nombre;
 
@@ -40,42 +44,6 @@ public class Categoria {
 	@JsonIgnore
 	private List<Producto> productos = new ArrayList<>();
 
-//	public Categoria() {
-//		super();
-//	}
-//
-//	public Categoria(String nombre) {
-//		this();
-//		this.nombre = nombre;
-//	}
-//
-//	public Long getId() {
-//		return id;
-//	}
-//
-//	public void setId(Long id) {
-//		this.id = id;
-//	}
-//
-//	public String getNombre() {
-//		return nombre;
-//	}
-//
-//	public void setNombre(String nombre) {
-//		this.nombre = nombre;
-//	}
-//
-//	public List<Producto> getProductos() {
-//		return productos;
-//	}
-//
-//	public void setProductos(List<Producto> productos) {
-//		this.productos = productos;
-//	}
-//
-//	@Override
-//	public String toString() {
-//		return "Categoria [id=" + id + ", nombre=" + nombre + "]";
-//	}
+
 
 }
