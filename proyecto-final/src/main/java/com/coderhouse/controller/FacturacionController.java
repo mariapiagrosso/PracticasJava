@@ -19,7 +19,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "Compras", description = "API para la gestión de compras de productos")
 @RestController
-@RequestMapping("/api/v1/compras")
+@RequestMapping("/api/factura")
 public class FacturacionController {
 	 private final FacturacionService facturacionService;
 

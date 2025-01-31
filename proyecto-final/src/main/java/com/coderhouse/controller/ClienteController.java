@@ -33,7 +33,7 @@ public class ClienteController {
 	@Autowired
 	private ClienteService clienteService;
 
-	@Operation(summary = "Obtener Lista de Cursos")
+	@Operation(summary = "Obtener Lista de Clientes")
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Lista de Cliente obtenida Correctamente", 
 					content = {

@@ -29,7 +29,7 @@ public class FacturaDetalle {
     private Long id;
 	
 	
-	 @Schema(description = "Factura relacionada con este detalle")
+	 @Schema(description = "Factura relacionada detalle")
 	    @ManyToOne
 	    @JoinColumn(name = "factura_id", nullable = false)
 	    private Factura factura;

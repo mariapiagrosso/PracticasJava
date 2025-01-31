@@ -22,7 +22,7 @@ public class NewFacturaReq {
         @Schema(description = "ID del producto", example = "1", requiredMode = Schema.RequiredMode.REQUIRED)
         private Long productoId;
 
-        @Schema(description = "Cantidad del producto", example = "5", requiredMode = Schema.RequiredMode.REQUIRED)
+        @Schema(description = "Cantidad del producto", example = "2", requiredMode = Schema.RequiredMode.REQUIRED)
         private Integer cantidad;
 
 		public Long getProductoId() {
