@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "6558caa0-03b8-42d0-8b06-06d6724ce332",
+		"name": "Factura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40987376"
+	},
+	"item": [
+		{
+			"name": "Crear Factura",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n        \"numeroFactura\": \"22\",\r\n        \"fechaVenta\": \"2025-01-12\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/factura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"factura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Facturas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/factura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"factura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Factura por su ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/factura/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"factura",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una factura",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/factura/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"factura",
+						"22"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
